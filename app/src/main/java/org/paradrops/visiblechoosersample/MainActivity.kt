@@ -3,20 +3,10 @@ package org.paradrops.visiblechoosersample
 import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.Button
-import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 import org.paradrops.visiblechooser.VisibleChooser
 
 class MainActivity : AppCompatActivity() {
-
-    private val firstView by lazy { findViewById(R.id.firstView) as TextView }
-    private val secondView by lazy { findViewById(R.id.secondView) as TextView }
-    private val thirdView by lazy { findViewById(R.id.thirdView) as TextView }
-
-    private val firstViewButton by lazy { findViewById(R.id.firstViewButton) as Button }
-    private val secondViewButton by lazy { findViewById(R.id.secondViewButton) as Button }
-    private val thirdViewButton by lazy { findViewById(R.id.thirdViewButton) as Button}
-
     private val viewChooser = Chooser(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +29,14 @@ class MainActivity : AppCompatActivity() {
 
         thirdViewButton.setOnClickListener {
             viewChooser.showView(Chooser.Views.ThirdView.value)
+        }
+
+        goneAllViewButton.setOnClickListener {
+            viewChooser.goneAllView()
+        }
+
+        invisibleAllViewButton.setOnClickListener {
+            viewChooser.invisibleAllView()
         }
     }
 
