@@ -11,7 +11,7 @@ VisibleChooser is many views visible manager library for Android.
 app gradle file
 
 dependencies {
-    compile 'com.github.paraya3636:VisibleChooser:0.1'
+    compile 'com.github.paraya3636:VisibleChooser:0.2'
 }
 repositories {
     maven { url 'https://jitpack.io' }
