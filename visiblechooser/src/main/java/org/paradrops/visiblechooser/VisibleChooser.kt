@@ -30,6 +30,18 @@ open class VisibleChooser(private val context: Context) {
         animationSet.start()
     }
 
+    fun goneAllView() {
+        for (i in 0..viewArray.size() -1) {
+            viewArray[i].visibility = View.GONE
+        }
+    }
+
+    fun invisibleAllView() {
+        for (i in 0..viewArray.size() -1) {
+            viewArray[i].visibility = View.INVISIBLE
+        }
+    }
+
     private fun setupAnimation(): VisibleAnimationSet {
         val goneAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out)
         val visibleAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in)
